@@ -101,6 +101,7 @@ public class Fileupload {
 					System.out.println(picturePath);
 					System.out.println(RelativePath);
 					return RelativePath;
+					//大叔大婶大撒所大所多
 				} catch (IOException e) {
 					// TODO: handle exception
 					e.printStackTrace();
