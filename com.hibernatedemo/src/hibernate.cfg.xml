@@ -1,0 +1,33 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<property name="show_sql">true</property>
+	<!-- <property name="hbm2ddl.auto">update</property> -->
+	<!-- <property name="cache.use_query_cache">true</property>
+		<property name="cache.use_second_level_cache">true</property>
+		<property name="cache.use_structured_entries">true</property>
+		<property name="cache.region.factory_class">org.hibernate.cache.EhCacheRegionFactory</property>
+		<property name="net.sf.ehcache.configurationResourceName">ehcache.xml</property> -->
+	<property name="myeclipse.connection.profile">
+		com.microsoft.sqlserver.jdbc.SQLServerDriver
+	</property>
+	<property name="connection.url">
+		jdbc:sqlserver://localhost:1433;DatabaseName=BooksDB
+	</property>
+	<property name="connection.username">sa</property>
+	<property name="connection.password">123456</property>
+	<property name="connection.driver_class">
+		com.microsoft.sqlserver.jdbc.SQLServerDriver
+	</property>
+	<property name="dialect">
+		org.hibernate.dialect.SQLServerDialect
+	</property>
+	<mapping resource="com/hibernatedemo/model/User.hbm.xml" />
+	<mapping resource="com/hibernatedemo/model/College.hbm.xml" />
+	<mapping resource="com/hibernatedemo/model/Deparment.hbm.xml" />
+
+</session-factory>
+</hibernate-configuration>
